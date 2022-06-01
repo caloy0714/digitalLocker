@@ -17,11 +17,14 @@
             </div>
             @endif
 
+<div class="card">
+    <div class="card-body">
             <div>
-                <a class="btn btn-primary btn-sm" href="/new-locker-form">Create</a>
+                <a class="btn btn-primary btn-sm" href="/new-locker-form">Create <i class='fas fa-plus'></i></a>
             </div>
+</br>
 
-            <table class="table" id="friends-table">
+    <table class="table" id="lockers-table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -40,14 +43,14 @@
                 <td> ***** </td>
                 
                  <td>
-                        <a class="btn btn-info btn-sm" href=" /show-locker/{{ $locker->getId() }}">
-                            Show
+                        <a class="btn btn-primary btn-sm" href=" /show-locker/{{ $locker->getId() }}">
+                        <i class="fas fa-eye"></i> Show
                         </a>
                         <a class="btn btn-info btn-sm" href="/edit-locker/{{ $locker->getId() }}">
-                            Edit
+                        <i class="fa fa-edit"></i>  Edit
                         </a>
                         <a class="btn btn-danger btn-sm" onclick="return confirmDelete()" href="/delete-locker/{{ $locker->getId() }}">
-                            Delete
+                        <i class="fa fa-trash"></i> Delete
                         </a>
                         
                     </td>
@@ -57,6 +60,8 @@
             </table>
         </div>
     </div>
+</div>
+</div>
 </div>
 
 <script>
@@ -82,7 +87,7 @@ function confirmDelete() {
 }
 
 jQuery(document).ready( function () {
-    jQuery('#friends-table').DataTable();
+    jQuery('#lockers-table').DataTable();
 });
 </script>
 @endsection

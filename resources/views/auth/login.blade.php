@@ -5,8 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
+                <div class="card-header text-center">
+                <img src="/images/logo.png" />
+               <br> {{ __('Login') }} Your Account in Digital Locker
+                </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -56,12 +58,12 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                               
+                                    <a class="btn btn-link" href="{{ route('register') }}">
+                                     
+                                        Don't have an Account?
                                     </a>
-                                @endif
+                            
                             </div>
                         </div>
                     </form>

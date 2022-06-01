@@ -36,6 +36,11 @@ class locker extends Model
     {
         return $this->input_password;
     }
+
+    public function getCreated()
+    {
+        return $this->created_at;
+    }
     
 
     public function setWebsiteName($value)

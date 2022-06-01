@@ -19,6 +19,19 @@ class LockerController extends Controller
         
         return view('lockers', compact('storage'));
     }
+   
+    public function history()
+    {
+        $storage = [];
+
+        try {
+            $storage = Locker::all();
+        } catch (Exception $e) {
+            $request->session()->flash('error', $e->getMessage());
+        }
+        
+        return view('history', compact('storage'));
+    }
 
     public function showEditForm($id)
     {

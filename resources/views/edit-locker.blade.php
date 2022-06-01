@@ -4,10 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <h1>Edit Friend Record</h1>
-
-            @include('errors.validation-errors')
-
+            <div class="card" >
+                <div class="card-header text-center" >
+                    <h3>Edit Locker Record  {{ $locker->getId() }}</h3>
+                 </div>
+ @include('errors.validation-errors')
+ <div class="card-body fs-4 font-monospace">
             <form action="/save-edit-locker" method="POST">
                 <input type="hidden" name="id" value="{{ $locker->getId() }}" />
                 @csrf
@@ -23,11 +25,14 @@
                     <label>Password</label>
                     <input type="password" class="form-control" name="input_password"  value="{{ $locker->getPassword() }}">
                 </div>
+</br>
                 <a href="/lockers"><button type="button" class="btn btn-secondary">
                     <i class="fas fa-arrow-circle-left"></i> &nbsp;Back</button></a>
-                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <button type="submit" class="btn btn-primary">Save Changes </button>
             </form>
         </div>
     </div>
+</div>
+</div>
 </div>
 @endsection

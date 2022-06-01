@@ -4,10 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="card">
+
+            
             <h1>Add New Locker</h1>
 
             @include('errors.validation-errors')
-
+            <div class="card-body">
             <form action="/save-new-locker" method="POST">
                 @csrf
                 <div class="form-group">
@@ -28,5 +31,7 @@
             </form>
         </div>
     </div>
+</div>
+</div>
 </div>
 @endsection
