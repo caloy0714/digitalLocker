@@ -35,7 +35,6 @@ class LockerController extends Controller
 
     public function showEditForm($id)
     {
-        // SELECT * FROM friends WHERE id=$id
         $locker = Locker::find($id);
         return view('edit-locker', compact('locker'));
     }
@@ -93,7 +92,7 @@ class LockerController extends Controller
         ]);
 
         if (!is_null($locker)) {
-            $request->session()->flash('message', 'New friend record has been added into the database');
+            $request->session()->flash('message', 'New record has been added');
         } else {
             $request->session()->flash('error', 'Some Field are Missing');
         }

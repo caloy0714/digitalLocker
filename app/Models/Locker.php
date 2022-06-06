@@ -45,14 +45,14 @@ class locker extends Model
 
     public function setWebsiteName($value)
     {
-        // UPDATE friends SET complete_name=':value' WHERE id=$this->id
+        // UPDATE
         $this->website_name = $value;
         return $this->save();
     }
 
     public function setUsername($value)
     {
-        // UPDATE friends SET email=':value' WHERE id=$this->id
+        // UPDATE 
         $this->username = $value;
         return $this->save();
     }
