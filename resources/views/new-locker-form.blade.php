@@ -5,12 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-
-            
-            <h1>Add New Locker</h1>
-
+                <div class="card-header text-center">
+                    <h1>Add New Locker</h1>
+                        </div>
             @include('errors.validation-errors')
-            <div class="card-body">
+            <div class="card-body  fs-5 font-monospace">
             <form action="/save-new-locker" method="POST">
                 @csrf
                 <div class="form-group">
@@ -25,9 +24,11 @@
                     <label>Password</label>
                     <input type="password" class="form-control" name="input_password" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Save Changes</button>
+                </br>
                 <a href="/lockers"><button type="button" class="btn btn-secondary">
                     <i class="fas fa-arrow-circle-left"></i> &nbsp;Back</button></a>
+                <button type="submit" class="btn btn-primary">Create</button>
+                
             </form>
         </div>
     </div>

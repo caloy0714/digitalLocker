@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-uppercase">WELCOME  {{ Auth::user()->name }} !</div>
+                <div class="card-header text-uppercase"><strong>WELCOME  {{ Auth::user()->name }} !</strong></div>
                 <div class="card">
                 <div class="card-body">
                     @if (session('status'))
@@ -18,11 +18,14 @@
                             {{ session('error') }}
                         </div>
                     @endif
-
                     <img src="/images/logo.png" class="rounded float-end">
-                    <h5 class="card-title">Special title treatment</h5>
-                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        
+                    <h5 class="card-title">We secure and make sure that your info is safe with us</h5>
+                         <p class="card-text">
+                             <ul>
+                             <li>With supporting text below as a natural lead-in to additional content.</li>
+                             <li>With supporting text below as a natural lead-in to additional content.</li>
+                            </ul>
+                         </p>
                             <a href="/lockers" class="btn btn-primary">Create Now</a>
                 </div>
             </div>

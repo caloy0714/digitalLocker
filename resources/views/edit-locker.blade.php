@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card" >
                 <div class="card-header text-center" >
-                    <h3>Edit Locker Record  {{ $locker->getId() }}</h3>
+                    <h3>Edit Locker#{{ $locker->getId() }}</h3>
                  </div>
  @include('errors.validation-errors')
  <div class="card-body fs-4 font-monospace">

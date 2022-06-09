@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Locker;
+use App\Models\User;
 
 class LockerController extends Controller
 {
@@ -18,6 +19,19 @@ class LockerController extends Controller
         }
         
         return view('lockers', compact('storage'));
+    }
+
+    public function indexTwo()
+    {
+        $user = [];
+
+        try {
+            $user = User::all();
+        } catch (Exception $e) {
+            $request->session()->flash('error', $e->getMessage());
+        }
+        
+        return view('user-register', compact('user'));
     }
    
     public function history()

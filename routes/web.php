@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LockerController;
 use App\Http\Controllers\NoteController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,3 +38,12 @@ Route::get('/new-notes-form', [NoteController::class, 'showNewForm']);
 Route::post('/save-new-note', [NoteController::class, 'saveNewNote']);
 Route::get('/delete-notes/{id}', [NoteController::class, 'deleteReminder']);
 Route::get('/show-notes/{id}', [NoteController::class, 'showReminder']);
+
+
+
+Route::group(['middleware'=>['auth', 'isAdmin']], function(){
+    Route::get('/user-register', function(){
+        return view('user-register');
+    });
+    Route::get('/user-register', [LockerController::class, 'indexTwo']);
+});
