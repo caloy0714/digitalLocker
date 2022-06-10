@@ -17,7 +17,7 @@ use App\Http\Controllers\NoteController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('/auth/login');
 });
 
 Auth::routes();

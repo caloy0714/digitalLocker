@@ -41,6 +41,11 @@ class locker extends Model
     {
         return $this->created_at;
     }
+
+    public function getUpdated()
+    {
+        return $this->updated_at;
+    }
     
 
     public function setWebsiteName($value)

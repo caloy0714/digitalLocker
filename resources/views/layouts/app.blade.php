@@ -69,7 +69,7 @@
                                 <a class="nav-link active" aria-current="page" href="/lockers">Storage</a>
                                 <a class="nav-link active" aria-current="page" href="/notes-home">Notes</a>
                                 <a class="nav-link active" aria-current="page" href="/history">History</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="/auth/login"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                        {{ __('Logout') }}

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -22,8 +22,9 @@
                     <h5 class="card-title">We secure and make sure that your info is safe with us</h5>
                          <p class="card-text">
                              <ul>
-                             <li>With supporting text below as a natural lead-in to additional content.</li>
-                             <li>With supporting text below as a natural lead-in to additional content.</li>
+                             <li>The longer the password the stronger it is.</li>
+                             <li>It is better to not write down password and notes except if you're using Digital Locker.</li>
+                             <li>And remember your passwords are the key to your digital life.</li>
                             </ul>
                          </p>
                             <a href="/lockers" class="btn btn-primary">Create Now</a>

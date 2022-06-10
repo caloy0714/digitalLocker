@@ -25,7 +25,7 @@
             <tbody>
                 @foreach ($storage as $locker)
                 <tr>
-                <td>Locker #{{ $locker->getId() }} is created at {{ $locker->getCreated() }} </td>
+                <td>Locker #{{ $locker->getId() }} is created at {{ $locker->getCreated() }} and is updated at #{{ $locker->getUpdated() }}</td>
                 </tr>
                 @endforeach
             </tbody>
