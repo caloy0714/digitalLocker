@@ -47,17 +47,14 @@ class locker extends Model
         return $this->updated_at;
     }
     
-
     public function setWebsiteName($value)
     {
-        // UPDATE
         $this->website_name = $value;
         return $this->save();
     }
 
     public function setUsername($value)
     {
-        // UPDATE 
         $this->username = $value;
         return $this->save();
     }

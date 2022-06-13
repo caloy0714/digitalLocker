@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::table('lockers', function (Blueprint $table) {
             $table->softDeletes();
         });
+
     }
 
     /**

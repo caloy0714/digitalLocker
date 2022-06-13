@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('website_name', 100)->nullable();
             $table->string('username', 100)->nullable();
-            $table->string('input_password', 20)->nullable();
+            $table->string('input_password')->nullable();
             $table->timestamps();
         });
     }

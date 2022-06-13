@@ -8,6 +8,11 @@ use App\Models\User;
 
 class LockerController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $storage = [];
@@ -37,13 +42,7 @@ class LockerController extends Controller
     public function history()
     {
         $storage = [];
-
-        try {
-            $storage = Locker::all();
-        } catch (Exception $e) {
-            $request->session()->flash('error', $e->getMessage());
-        }
-        
+        $storage = Locker::all();
         return view('history', compact('storage'));
     }
 
@@ -92,7 +91,7 @@ class LockerController extends Controller
         $validated = $request->validate([
             'website_name' => 'required|max:100',
             'username' => 'required',
-            'input_password' => 'required|max:20'
+            'input_password' => 'required'
         ]);
 
         $website_name = $request->website_name;
@@ -119,7 +118,7 @@ class LockerController extends Controller
         $locker = Locker::find($id);
         if (!is_null($locker)) {
             $locker->delete();
-            $request->session()->flash('message', 'Record has been deleted');
+            $request->session()->flash('message', 'Locker has been deleted');
         } else {
             $request->session()->flash('error', 'Unable to remove the locker');
         }

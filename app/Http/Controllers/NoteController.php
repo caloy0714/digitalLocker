@@ -7,6 +7,10 @@ use App\Models\Note;
 
 class NoteController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $notebook = [];
@@ -18,6 +22,19 @@ class NoteController extends Controller
         }
         
         return view('notes-home', compact('notebook'));
+    }
+
+    public function history()
+    {
+        $notebook = [];
+
+        try {
+            $notebook = Note::all();
+        } catch (Exception $e) {
+            $request->session()->flash('error', $e->getMessage());
+        }
+        
+        return view('history', compact('notebook'));
     }
 
     public function showEditForm($id)

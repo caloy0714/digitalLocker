@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
+
 class Note extends Model
 {
     use HasFactory;
@@ -37,7 +38,6 @@ class Note extends Model
     
     public function setNoteContent($value)
     {
-        // UPDATE
         $this->note = $value;
         return $this->save();
     }
