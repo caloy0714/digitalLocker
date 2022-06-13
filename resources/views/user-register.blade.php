@@ -25,6 +25,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Date Created</th>
+                    <th>Role</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +35,7 @@
                 <td> {{ $locker->getName() }} </td>
                 <td> {{ $locker->getEmail() }} </td>
                 <td> {{ $locker->getCreated() }} </td>
+                <td> {{ $locker->getRole() }} </td>
                 
                 </tr>
                 @endforeach

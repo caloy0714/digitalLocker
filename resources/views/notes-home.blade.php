@@ -35,7 +35,7 @@
                 @foreach ($notebook as $reminder)
                 <tr>
                 <td> {{ $reminder->getId() }} </td>
-                <td> {{ $reminder->getNoteContent() }} </td>
+                <td><textarea disabled> {{ $reminder->getNoteContent() }}</textarea> </td>
                 
                 <td>
                         <a class="btn btn-primary btn-sm" href=" /show-notes/{{ $reminder->getId() }}">

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Note extends Model
 {
     use HasFactory;
@@ -26,6 +27,12 @@ class Note extends Model
     public function getCreated()
     {
         return $this->created_at;
+    }
+
+    
+    public function getUpdated()
+    {
+        return $this->updated_at;
     }
     
     public function setNoteContent($value)

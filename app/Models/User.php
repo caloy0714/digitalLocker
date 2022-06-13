@@ -67,6 +67,11 @@ class User extends Authenticatable
         return $this->created_at;
     }
 
+    public function getRole()
+    {
+        return $this->role_as;
+    }
+
 
     
 }

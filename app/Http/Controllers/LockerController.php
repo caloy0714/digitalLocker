@@ -78,7 +78,7 @@ class LockerController extends Controller
             if ($result == false) {
                 $request->session()->flash('error', 'Unable to modify the record');
             } else {
-                $request->session()->flash('message', 'Successfully updated record');
+                $request->session()->flash('message', 'Successfully updated locker');
             }
         } catch (Exception $e) {
             $request->session()->flash('message', $e->getMessage());
@@ -106,7 +106,7 @@ class LockerController extends Controller
         ]);
 
         if (!is_null($locker)) {
-            $request->session()->flash('message', 'New record has been added');
+            $request->session()->flash('message', 'New locker has been added');
         } else {
             $request->session()->flash('error', 'Some Field are Missing');
         }
@@ -121,7 +121,7 @@ class LockerController extends Controller
             $locker->delete();
             $request->session()->flash('message', 'Record has been deleted');
         } else {
-            $request->session()->flash('error', 'Unable to remove the record');
+            $request->session()->flash('error', 'Unable to remove the locker');
         }
 
         return redirect('/lockers');

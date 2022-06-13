@@ -47,7 +47,7 @@ class NoteController extends Controller
             if ($result == false) {
                 $request->session()->flash('error', 'Unable to modify the record');
             } else {
-                $request->session()->flash('message', 'Successfully updated record');
+                $request->session()->flash('message', 'Successfully updated note');
             }
         } catch (Exception $e) {
             $request->session()->flash('message', $e->getMessage());
@@ -69,7 +69,7 @@ class NoteController extends Controller
         ]);
 
         if (!is_null($reminder)) {
-            $request->session()->flash('message', 'New record has been added');
+            $request->session()->flash('message', 'New note has been added');
         } else {
             $request->session()->flash('error', 'Some Field are Missing');
         }
@@ -82,9 +82,9 @@ class NoteController extends Controller
         $reminder = Note::find($id);
         if (!is_null($reminder)) {
             $reminder->delete();
-            $request->session()->flash('message', 'Record has been deleted');
+            $request->session()->flash('message', 'Note has been deleted');
         } else {
-            $request->session()->flash('error', 'Unable to delete the record');
+            $request->session()->flash('error', 'Unable to delete the note');
         }
 
         return redirect('/notes-home');

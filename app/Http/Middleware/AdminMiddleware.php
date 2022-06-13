@@ -23,7 +23,7 @@ class AdminMiddleware
 
        }else
        {
-           return redirect('/home')->with('status','Not Admin');
+           return redirect('/home')->with('status','Admin Only');
 
 
        }

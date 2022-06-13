@@ -12,7 +12,9 @@
                 <input type="hidden" name="id" value="{{ $reminder->getId() }}" />
                 @csrf
                 <div class="form-group">
+                <textarea id="txtArea" rows="10" cols="70" name="note" disabled>
                     {{ $reminder->getNoteContent() }}
+</textarea>
                 </div>
 
 </br>
